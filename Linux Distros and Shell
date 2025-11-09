@@ -38,9 +38,9 @@ Getting Help in the Shell:
 Finding System Information from the Shell:
 
 = "whoami": displays current username
-= "id": returns user's identity. Builds on whoami 
+= "id": returns user's identity. Builds on whoami and can hel pidentify what sort of access a specific user may have. Membership of the sudo group is particularly interesting, as it means the user can run some/all of the commands as the root user (most powerful)
 = "hostname": sets or prints the name of the current host system
-= "uname": prints basic information about the OS name and system hardware
+= "uname": prints basic information about the OS name and system hardware. The "-a" parameter would return all (look at the manual page to see this". If it doesn't know something, it will omit some information like the -p processor type for example)
 = "pwd": returns the name of the current working directory
 = "ifconfig": assigns or views an address to a network interface and/or configure network interface parameters
 = "ip": shows/manipulates routing, network devices, interfaces and tunnels
@@ -58,7 +58,7 @@ Finding System Information from the Shell:
 Using SSH (Secure Shell):
 
 = Allows clients to access and execute commands/actions on remote computers 
-
+= Syntax: "ssh username@IP" 
 
 
 __________________________________________________________________________________________________________________________________________________________________________________________________
