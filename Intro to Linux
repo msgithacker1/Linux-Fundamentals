@@ -1,1 +1,37 @@
+= Linux is an operating system - software used to interact with computer hardware - that comes in many different distros for tailored for different purposes
+
+= Linux started off as a bunch of files written in C by a Finnish student, Linus Torvalds who wanted a new, free OS kernel (part of an OS that bridges software and hardware)
+= It grew to around 600 different distros and, since it's open source, can be modified commercially and non-commercially
+
+= It's the most widely used OS (e.g., different distros for different purposes, AndroidOS is based on the LInux kernel, free and open-source etc.)
+_____________________________________________________________________________________________________________________________________________________________________________
+
+= Linux philosophy includes these things:
+
+1. Modularity: Linux has many different tools that are small, single-purpose programs, that can be combined together for a purpose
+2. Avoiding captive UIs: Linux is designed to work mainly with shell-based operations, giving greater control over the OS
+3. Everything is a file: Linux has all its config files for different services just stored in one or more text files
+
+= Linux components include these things:
+
+1. Bootloader: Code that runs on start-up to help the boot process start the OS
+2. OS Kernel: The Kernel is the main part of the OS and helps manage the resources for the system's I/O devices at the hardware level
+3. Daemons: Linux's background services. They help make sure key operations like scheduling, printing and multimedia are working just fine. These small programs load after booting up/logging in
+4. OS Shell: Essentially the CLI for the OS and user. Shells include Bash, Ksh and Fish
+5. Graphics Server: Provides a graphical server called "X" or "X-server" that allows graphical programs to run locally or remotely on the X-windowing system
+6. Window Manager: The GUI. Has a host of different apps, files and web browsers for the user 
+7. Utilities: Apps/Utilities are programs that perform specific functions either for the user or other programs 
+
+= Linux Architecture includes these layers;
+
+1. Hardware: The physical components of peripheral devices like the RAM, hard drive, CPU etc.
+2. Kernel: The core of the Linux OS managing computer resources, like CPU, memory etc. It manages resources between the proceses and resolves conflict between different processes
+3. Shell: The CLI which the user can write commands in to execute the kernel's functions
+4. System Utility: Helps make all of the OS functionality available to the user
+
+_____________________________________________________________________________________________________________________________________________________________________________
+
+
+
+
 
