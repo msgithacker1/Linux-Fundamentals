@@ -14,7 +14,7 @@ ________________________________________________________________________________
 
 = Linux components include these things:
 
-1. Bootloader: Code that runs on start-up to help the boot process start the OS
+1. Bootloader: Code that runs on start-up to help the boot process start the OS. Loads the Kernel
 2. OS Kernel: The Kernel is the main part of the OS and helps manage the resources for the system's I/O devices at the hardware level
 3. Daemons: Linux's background services. They help make sure key operations like scheduling, printing and multimedia are working just fine. These small programs load after booting up/logging in
 4. OS Shell: Essentially the CLI for the OS and user. Shells include Bash, Ksh and Fish
@@ -31,7 +31,37 @@ ________________________________________________________________________________
 
 _____________________________________________________________________________________________________________________________________________________________________________
 
+= The Linux File System Hierarchy is structured like a tree with standard top-level directories which are:
 
+/: The top-level directory is the root filesystem and contains all of the files required to boot the operating system before other filesystems (i.e., fileystems are how Linux organises and stores data on storage devices like how files are named, stored, read, written etc.) are mounted, as well as the files required to boot the other filesystems. After boot, all of the other filesystems are mounted at standard mount points as subdirectories of the root.
+
+/bin: Contains essential command binaries (compiled executable programs). These are machine-readable pieces of code that are the set of minimum commands required to boot, repair or recover a system. Core CLI tools for every Linux system to function
+
+/boot: Consists of the static bootloader (i.e., the bootloader but it has to work before even Linux itself is fully running - it doesn't depend on other parts of the filesystem), kernel executable, and files required to boot the Linux OS.
+
+/dev: Contains device files to facilitate access to every hardware device attached to the system.
+
+/etc: Local system configuration files. Configuration files for installed applications may be saved here as well.
+
+/home: Each user on the system has a subdirectory here for storage.
+
+/lib: Shared library files that are required for system boot.
+
+/media: External removable media devices such as USB drives are mounted here.
+
+/mnt: Temporary mount point for regular filesystems.
+
+/opt: Optional files such as third-party tools can be saved here.
+
+/root: The home directory for the root user.
+
+/sbin: This directory contains executables used for system administration (binary system files).
+
+/tmp: The operating system and many programs use this directory to store temporary files. This directory is generally cleared upon system boot and may be deleted at other times without any warning.
+
+/usr: Contains executables, libraries, man files (i.e., manual files that work like the built-in documentation for almost every command, program and config file in Linux) , etc.
+
+/var: This directory contains variable data files such as log files, email in-boxes, web application related files, cron files, and more.
 
 
 
