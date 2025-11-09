@@ -14,7 +14,7 @@ ________________________________________________________________________________
 
 = Linux components include these things:
 
-1. Bootloader: Code that runs on start-up to help the boot process start the OS. Loads the Kernel
+1. Bootloader: Code that runs on start-up to help the boot process start the OS. Loads the Kernel. Linux uses GRUB mainly (GRand Unified Bootloader) 
 2. OS Kernel: The Kernel is the main part of the OS and helps manage the resources for the system's I/O devices at the hardware level
 3. Daemons: Linux's background services. They help make sure key operations like scheduling, printing and multimedia are working just fine. These small programs load after booting up/logging in
 4. OS Shell: Essentially the CLI for the OS and user. Shells include Bash, Ksh and Fish
