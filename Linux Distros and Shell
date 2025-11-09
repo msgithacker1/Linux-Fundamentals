@@ -1,0 +1,10 @@
+= Distros are OSes based on the Linux kernel and are multiple instances of Linux designed for different purposes and end users
+= They have the same components, architecture and philosophy but offer their own unique products, services, packages, UI, tools etc.
+= Linux distros are widely used as it is a secure, stable and reliable OS with regular updates. For cyber, since it's open source, we can customise our distrro to configure it for specific uses
+
+Debian as an OS:
+
+= Debian is another Linux distro, known for its stability and reliability
+= It uses the apt (Advanced Package Tool) package managed system to handle updates and patches
+= One of the most flexible and customisable distros, providing excellent system control to the user
+= Strong committment to privacy and security, receiving regular updates. Useful for cyber
