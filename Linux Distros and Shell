@@ -22,7 +22,46 @@ The Shell (Linux terminal):
 = The $ sign on the prompt means we logged in as a user and the # means we logged in as root
 = If no username, hostname and current working directory is shown, then the PS1 variable in the environment (that contains this information and displays it and personalises the CLI) is not set correctly. leading to only a "$" or "#" shell prompt instead of having all the details
 = This PS1 variable is useful for pentests because you can modify it to show even more information like IP, success/failure of the last command etc. to keep better track of actions and operations 
+= We can customise the prompt by using special characters and variables in the shell config file (.bashrc for bash). E.g., \u represents current username, \t represents current time 
 
+Getting Help in the Shell:
+
+= We may not always be fully familiar with every tool and command, so we can use the man files and help function to figure out the tools
+
+= "ls" lists all files and directories in the current folder/any specified directory
+= "man" displays the manual pages for commands and provides more details on how to use them. E.g., "man ls"
+= "--help" can help us to quickly look at the optional parameters without looking through the complete documentation. E.g., "ls --help"
+= Some other tools, like curl, provide a shorter version of help by using "-h" instead of "--help". E.g., "curl -h"
+ = "apropos" searches short descriptions in the manual pages for the tools for instances of a given keyword. E.g., "apropos sudo"
+
+
+Finding System Information from the Shell:
+
+= "whoami": displays current username
+= "id": returns user's identity. Builds on whoami 
+= "hostname": sets or prints the name of the current host system
+= "uname": prints basic information about the OS name and system hardware
+= "pwd": returns the name of the current working directory
+= "ifconfig": assigns or views an address to a network interface and/or configure network interface parameters
+= "ip": shows/manipulates routing, network devices, interfaces and tunnels
+= "netstat": shows the current network status
+= "ss": used to investigate sockets
+= "ps": shows process status
+= "who": displays who is logged in
+= "env": prints environment or sets and executes commands
+= "lsblk": lists block devices
+= "lsusb": lists USB devices connected
+= "lsof": lists opened files
+= "lspci": lists PCI devices (i.e., any device that connects to the computer's motherboard via a PCI slot. Includes stuff like graphics cards, network adapters etc.)
+
+
+Using SSH (Secure Shell):
+
+= Allows clients to access and execute commands/actions on remote computers 
+
+
+
+__________________________________________________________________________________________________________________________________________________________________________________________________
 Terminal Emulators:
 
 = Software that emulates the functionality of a terminal
