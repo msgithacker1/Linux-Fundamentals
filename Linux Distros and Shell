@@ -8,3 +8,26 @@ Debian as an OS:
 = It uses the apt (Advanced Package Tool) package managed system to handle updates and patches
 = One of the most flexible and customisable distros, providing excellent system control to the user
 = Strong committment to privacy and security, receiving regular updates. Useful for cyber
+
+__________________________________________________________________________________________________________________________________________________________________________________________________
+
+The Shell (Linux terminal):
+
+= Text-based I/O interface between the users and the Linux kernel
+= Using the shell means more ways to intereact with progrgams and processes to get information faster 
+= The most common Linux shell is Bash (Bourne-Again Shell)
+
+= The bash prompt by default tells you the username, computer hostname and current folder directory 
+= The home directory for a user is marked with a tilde "~" sign. This is the default folder when we log in 
+= The $ sign on the prompt means we logged in as a user and the # means we logged in as root
+= If no username, hostname and current working directory is shown, then the PS1 variable in the environment (that contains this information and displays it and personalises the CLI) is not set correctly. leading to only a "$" or "#" shell prompt instead of having all the details
+= This PS1 variable is useful for pentests because you can modify it to show even more information like IP, success/failure of the last command etc. to keep better track of actions and operations 
+
+Terminal Emulators:
+
+= Software that emulates the functionality of a terminal
+= Allows text-based programs to be executed within a GUI 
+= Multiple of these CLI can be run as additional terminals in one terminal. Can help with different tasks like working in multiple directories at the same time
+
+
+
