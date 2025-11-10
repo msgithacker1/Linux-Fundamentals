@@ -1,0 +1,9 @@
+= The Linux shell is very powerful when it comes to accessing and editing files directly using commands
+= It can access files with just a few simple commands, allowing multiple commands at the same time and automate batch editing tasks which saves a lot of time over a GUI
+
+_________________________________________________________________________________________________________________________________________________________________________
+
+= To create a new file, we use this syntax: "touch <name>". E.g., # touch info.txt. You can directly create the file in a specific directory with this too. E.g., "$ touch ./Storage/local/user/userinfo.txt". The "." just means start the path from the current directory you're in right now
+= To create a new directory, we use this syntax: "mkdir <name>" (a new folder in the current directory we are working in). E.g., # mkdir Storage 
+= Sometimes, creating multiple directories within directories can be long. You can use this syntax to create a branch of folders directly: "mkdir -p <path>" (the -p means parent). E.g., "mkdir -p Storage/loca/user/Documents" to create all those subfolders within Storage
+= Once you're in a directory, you can see the whole structure using the tree tool. E.g., "tree ." tells you the entire structure of the folder in the current folder you're in. Again, the "." means your current folder
