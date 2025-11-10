@@ -5,4 +5,4 @@ Navigation:
 = The ls command may not list all the contents of a folder. The directory can have hidden files that start with a dot at the beginning of the name (e.g., .bashrc). use "ls -la" to list all files of a directory 
 = To find the contents of a specific path, we can use "ls" to specify a path. E.g., "ls /l /var/"
 = "cd" can be used to navigate straight away to our desired directory. E.g., "cd /dev/shm". "cd -" transfers us back to the directory we were last in 
-= 
+= "cd .." returns you to the parent directory because ".." means parent directory. "." means current working directory 
