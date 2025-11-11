@@ -63,3 +63,20 @@ Finding Files and Directories:
 = Search this local database for files (in this case, containing the .conf extension): "locate *.conf" - much quicker than find 
 
 = Using locate is quicker than using find, but we wouldn't have as many filter options that we can use with locate over find. It really just depends on what exactly we're searching for and how to search for it best 
+
+_________________________________________________________________________________________________________________________________________________________________________
+
+File Descriptors and Redirections:
+
+= The FD helps the Linux system to manage I/O operations. It helps to keep track of active I/O connections, such as reading from or writing to a file
+= The file descriptor represents your connection to the file/resource 
+= Whenever you need to perform I/O operations, the file descriptor is presented to the Operating System which knows where exactly the resource/file is located. Without this file descriptor, the operating system wouldn't know where the file/resource is located
+= File descriptors:
+
+1. STDIN - 0: data stream for input
+2. STDOUT - 1: data stream for output
+3. STDERR - 2: data stream for output that relates to an error occurring 
+
+STDIN and STDOUT:
+
+
