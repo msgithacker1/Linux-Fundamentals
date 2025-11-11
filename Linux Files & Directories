@@ -2,8 +2,64 @@
 = It can access files with just a few simple commands, allowing multiple commands at the same time and automate batch editing tasks which saves a lot of time over a GUI
 
 _________________________________________________________________________________________________________________________________________________________________________
+Creating New Files/Folders
 
 = To create a new file, we use this syntax: "touch <name>". E.g., # touch info.txt. You can directly create the file in a specific directory with this too. E.g., "$ touch ./Storage/local/user/userinfo.txt". The "." just means start the path from the current directory you're in right now
 = To create a new directory, we use this syntax: "mkdir <name>" (a new folder in the current directory we are working in). E.g., # mkdir Storage 
 = Sometimes, creating multiple directories within directories can be long. You can use this syntax to create a branch of folders directly: "mkdir -p <path>" (the -p means parent). E.g., "mkdir -p Storage/loca/user/Documents" to create all those subfolders within Storage
 = Once you're in a directory, you can see the whole structure using the tree tool. E.g., "tree ." tells you the entire structure of the folder in the current folder you're in. Again, the "." means your current folder
+
+_________________________________________________________________________________________________________________________________________________________________________
+Moving, Renaming and Copying Files:
+
+= The "mv" command renames the file with this syntax: "mk <original file name> <new file name>". E.g., "mv testfile.txt testfilechange.txt"
+= If you then add a path to the end of this command, then it leads to the files listed being moved. E.g., "mv testfile.txt testfilechange.txt Storage/"
+
+= To copy files from one directory to another, we can do that with the "cp" command and directory paths. E.g., "cp Storage/testfile.txt Storage/local/" to copy the file at the path to the new directory
+
+_________________________________________________________________________________________________________________________________________________________________________
+
+Editing Files:
+
+=  We use different text editors in Linux to edit a file like Vi, Vim (a more powerful clone of Vi with greater functionality and essentials that is compact, fast and powerful) and Nano
+
+Using Nano:
+
+= Creating and opening a new file: "nano newfile.txt" (also opens the Nano editor to start editing right away)
+= Reading a file: "cat newfile.txt" (prints the contents of the file to the console)
+
+Using Vim:
+
+= To learn to use Vim, use "vimtutor" in the Linux shell or the "tutor" command in Vim
+= To start Vim: "vim"
+= Vim can distinguish between text and command input. It comes with different fundamental modes that make the editor really powerful:
+
+- Normal Mode: all inputs are considered as editor commands. 
+- Insert Mode: all entered characters are inserted into the buffer
+- Visual Mode: Used to mark a part of the text, which will be visually highlighted. We change the highlighted area by moving the cursor. We can edit this area in different ways like deleting, copying or replacing it
+- Command Mode: Allows us to enter single-line commands at the bottom of the editor. This can be used for sorting, replacing text sections or deleting them etc
+- Replace Mode: Newly entered text will overwrite existing text characters unless there are no more old characters at the position of the current cursor. Then, newly entered text will be added
+- Ex Mode: Emulates the behaviour of the Ex editor, a predecessor of Vim. Provides a mode where multiple commmands can be executed in a sequence without returning to Normal mode after each command
+
+= To close Vim, just write ":q" while we have the editor open in Command mode 
+
+_________________________________________________________________________________________________________________________________________________________________________
+
+Finding Files and Directories:
+
+= Returning the path to the file or link that should be executed: "which". E.g., "which python" would return "/usr/bin/python". Helps to see if a specific program is available on the OS
+= Find folders, files and filter results: "find <location> <options>". E.g., "find / -type f -name *.conf -user root -size +20k -newermt 2020-03-03 -exec ls -al {} \; 2>/dev/null":
+
+-> "-type f" means type file. We want the searched objects to be type file (i.e., not folders)
+-> "-name *.conf" means we are indicating the name of the file we are looking for. In this case, the "*" means return all the files with the extension .conf
+-> "-user root" means we are looking for all the files that are owned by the user, root
+-> "-size +20k" means we are looking for all the files that are above 20KiB in size
+-> "newermt 2020-03-03" means we are setting the date as a filter. This will return files newer than this date specified 
+-> "exec ls -al {}" means execute the specified command in conjunction with the find command. Uses the curly brackets as placeholders for each result. 
+-> "\;" escapes the ; sign which would otherwise be interpreted by the shell and terminate the program without a conclusion 
+-> "2>/dev/null" is a STDERR redirection to the 'null device'. the redirection ensures that no errors are displayed in the terminal
+
+= Update the local database that contains all information about existing files and folders: "sudo updatedb"
+= Search this local database for files (in this case, containing the .conf extension): "locate *.conf" - much quicker than find 
+
+= Using locate is quicker than using find, but we wouldn't have as many filter options that we can use with locate over find. It really just depends on what exactly we're searching for and how to search for it best 
